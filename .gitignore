@@ -1,6 +1,13 @@
 vendor/
 node_modules/
 npm-debug.log
+.idea/
+.vscode/
+
+# I copied from the laravel's .gitignore source code
+Homestead.yaml
+Homestead.json
+yarn-error.log
 
 # Laravel 4 specific
 bootstrap/compiled.php
@@ -13,8 +20,7 @@ storage/*.key
 .env.*.php
 .env.php
 .env
-Homestead.yaml
-Homestead.json
+
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/

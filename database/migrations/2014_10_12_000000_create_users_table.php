@@ -18,11 +18,26 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
+            $table->integer("back_end_id");
+            $table->string("lang", 2);
             $table->rememberToken();
             $table->timestamps();
         });
     }
 
+/*
+ *  Create the table for every use registration
+ *
+    $table->increments('id');
+    $table->foreign("user_id")
+    ->references("id")->on("users")
+    ->onDelete("cascade")
+    ->onUpdate("restrict");
+    $table->ipAddress("ip");
+    $table->string("device");
+    $table->string("location");
+    $table->timestamps();
+    */
     /**
      * Reverse the migrations.
      *
